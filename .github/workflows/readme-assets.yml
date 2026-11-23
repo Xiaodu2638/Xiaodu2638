@@ -1,0 +1,50 @@
+name: refresh profile assets
+
+on:
+  schedule:
+    # every Monday 03:17 UTC (= 11:17 Asia/Shanghai), off the hour to dodge the
+    # cron stampede GitHub applies to top-of-hour schedules
+    - cron: "17 3 * * 1"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - "README.template.md"
+      - ".github/workflows/readme-assets.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Rebuild every SVG and the README
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/build.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          # --cached, not a bare diff: brand-new assets are untracked, and a plain
+          # "git diff --quiet" would report "no changes" and skip the commit
+          if git diff --cached --quiet; then
+            echo "nothing to update"
+            exit 0
+          fi
+          git commit -m "chore: refresh profile assets"
+          git push

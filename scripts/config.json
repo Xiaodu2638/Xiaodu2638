@@ -1,0 +1,57 @@
+{
+  "username": "Xiaodu2638",
+  "display_name": "Xiaodu",
+  "ascii_name": "XIAODU",
+  "typing_lines": [
+    "Hi, I'm Xiaodu.",
+    "C# / Avalonia desktop tooling.",
+    "Frontend & interactive web.",
+    "Building things that ship."
+  ],
+  "headline": "Developer \u00b7 C# & Web",
+  "bio_lines": [
+    "Hey, I'm Xiaodu \u2014 a developer who likes turning small ideas into things people can actually use.",
+    "I work mostly with C# / Avalonia for desktop tooling, and TypeScript / HTML / CSS for the web.",
+    "Right now I'm building offline-first tools and self-hosted services that keep working when the network doesn't."
+  ],
+  "badges": [
+    {"label": "C#", "icon": "dotnet"},
+    {"label": "Avalonia", "icon": "rider"},
+    {"label": "TypeScript", "icon": "typescript"},
+    {"label": "JavaScript", "icon": "javascript"},
+    {"label": "Python", "icon": "python"},
+    {"label": "HTML / CSS", "icon": "html5"},
+    {"label": "Docker", "icon": "docker"},
+    {"label": "Git", "icon": "git"}
+  ],
+  "links": {
+    "github": "https://github.com/Xiaodu2638",
+    "email": "Du81470775@126.com",
+    "bilibili": "",
+    "x": "",
+    "blog": ""
+  },
+  "pinned": [
+    {"repo": "Tarkov-Atlas", "desc": "Offline tactical map & quest helper for Escape from Tarkov"},
+    {"repo": "Live-QRCode", "desc": "Scan on phone, render on screen \u2014 self-hosted QR relay"},
+    {"repo": "Access-Denied", "desc": "Interactive narrative built on win11React"}
+  ],
+  "skills": {
+    "Languages": ["csharp", "cplusplus", "c", "python", "javascript", "typescript", "html5", "css3", "lua", "markdown"],
+    "Desktop & Web": ["dotnet", "rider", "intellijidea", "nodedotjs", "vuedotjs", "react", "vite"],
+    "Tools": ["git", "github", "githubactions", "docker", "cmake", "gnubash", "neovim", "figma"],
+    "Platforms": ["linux", "archlinux", "ubuntu", "windows", "godotengine", "blender", "ffmpeg", "nginx"]
+  },
+  "theme": {
+    "bg": "#0a0d16",
+    "panel": "#111726",
+    "panel_border": "#1e2639",
+    "accent": "#9daaf8",
+    "accent2": "#6ee7f9",
+    "text": "#c9d2e8",
+    "muted": "#6b7590",
+    "grid_empty": "#161c2b",
+    "levels": ["#1b2334", "#2f3a5c", "#4a568c", "#6f7ec4", "#9daaf8"]
+  },
+  "timezone": "Asia/Shanghai"
+}
