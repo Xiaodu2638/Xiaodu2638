@@ -98,7 +98,8 @@ def main() -> int:
 
     print("== rendering svg ==")
     docs: dict[str, Svg] = {
-        "hero.svg": hero_mod.hero(cfg),
+        "hero.svg": hero_mod.hero(cfg, dark=False),
+        "hero-dark.svg": hero_mod.hero(cfg, dark=True),
         # GitHub's <picture> swaps these two by prefers-color-scheme, so the light
         # file must actually be light - otherwise the switch is a no-op.
         "status.svg": panels.status_panel(cfg, snap, dark=False),
@@ -145,7 +146,8 @@ def main() -> int:
               .replace("{{HEADLINE}}", cfg["headline"])
               .replace("{{NAME}}", cfg["display_name"])
               .replace("{{USERNAME}}", cfg["username"])
-              .replace("{{TYPING0}}", cfg["typing_lines"][0]))
+              .replace("{{TYPING0}}", cfg["typing_lines"][0])
+              .replace("{{ASCII_NAME}}", cfg["ascii_name"]))
     write(ROOT / "README.md", readme)
 
     write(ROOT / "demos" / "status-panel.md",
