@@ -134,9 +134,18 @@ def main() -> int:
     # two cards per row; every row is closed so the layout never reflows
     rows = [cards[i:i + 2] for i in range(0, len(cards), 2)]
     pinned = "<br/>\n".join("\n".join(r) for r in rows)
+    # GitHub's markdown renderer wraps every bare <img> in <a href="<the image url>">,
+    # so clicking a decorative image navigates away to the raw file (or to camo).
+    # Wrapping it in <picture> keeps the <img> unlinked - that is the only reliable
+    # opt-out available to a README. Real links are added explicitly below instead.
+    def inert(src: str, alt: str, extra: str = "") -> str:
+        pad = f" {extra}" if extra else ""
+        return f'<picture><img{pad} src="{src}" alt="{alt}" /></picture>'
+
     badges = "".join(
-        f'<img src="https://img.shields.io/badge/{slugify(b["label"])}-111726'
-        f'?style=flat-square&logo={b["icon"]}&logoColor=9daaf8&labelColor=0a0d16" alt="{b["label"]}" />'
+        inert(f'https://img.shields.io/badge/{slugify(b["label"])}-111726'
+              f'?style=flat-square&logo={b["icon"]}&logoColor=9daaf8&labelColor=0a0d16',
+              b["label"])
         for b in cfg["badges"])
     readme = (tpl
               .replace("{{PINNED}}", pinned)

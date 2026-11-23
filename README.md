@@ -10,13 +10,13 @@
 </picture>
 
 <p align="center">
-  <img src="assets/typing/hello.svg" alt="Hi, I'm Xiaodu." />
+  <picture><img src="assets/typing/hello.svg" alt="Hi, I'm Xiaodu." /></picture>
 </p>
 
 <br />
 
 <p align="center">
-  <img src="assets/banner/status.svg" alt="STATUS" />
+  <picture><img src="assets/banner/status.svg" alt="STATUS" /></picture>
   <br /><br />
   <!-- one composed panel: heatmap + activity + streaks + languages -->
   <picture>
@@ -29,7 +29,7 @@
 <br />
 
 <p align="center">
-  <img src="assets/banner/intro.svg" alt="ABOUT" />
+  <picture><img src="assets/banner/intro.svg" alt="ABOUT" /></picture>
   <br /><br />
 
   <h2 align="center">Developer · C# & Web</h2>
@@ -41,7 +41,7 @@
   </p>
 
   <p align="center">
-    <img src="https://img.shields.io/badge/C%23-111726?style=flat-square&logo=dotnet&logoColor=9daaf8&labelColor=0a0d16" alt="C#" /><img src="https://img.shields.io/badge/Avalonia-111726?style=flat-square&logo=rider&logoColor=9daaf8&labelColor=0a0d16" alt="Avalonia" /><img src="https://img.shields.io/badge/TypeScript-111726?style=flat-square&logo=typescript&logoColor=9daaf8&labelColor=0a0d16" alt="TypeScript" /><img src="https://img.shields.io/badge/JavaScript-111726?style=flat-square&logo=javascript&logoColor=9daaf8&labelColor=0a0d16" alt="JavaScript" /><img src="https://img.shields.io/badge/Python-111726?style=flat-square&logo=python&logoColor=9daaf8&labelColor=0a0d16" alt="Python" /><img src="https://img.shields.io/badge/HTML_%2F_CSS-111726?style=flat-square&logo=html5&logoColor=9daaf8&labelColor=0a0d16" alt="HTML / CSS" /><img src="https://img.shields.io/badge/Docker-111726?style=flat-square&logo=docker&logoColor=9daaf8&labelColor=0a0d16" alt="Docker" /><img src="https://img.shields.io/badge/Git-111726?style=flat-square&logo=git&logoColor=9daaf8&labelColor=0a0d16" alt="Git" />
+    <picture><img src="https://img.shields.io/badge/C%23-111726?style=flat-square&logo=dotnet&logoColor=9daaf8&labelColor=0a0d16" alt="C#" /></picture><picture><img src="https://img.shields.io/badge/Avalonia-111726?style=flat-square&logo=rider&logoColor=9daaf8&labelColor=0a0d16" alt="Avalonia" /></picture><picture><img src="https://img.shields.io/badge/TypeScript-111726?style=flat-square&logo=typescript&logoColor=9daaf8&labelColor=0a0d16" alt="TypeScript" /></picture><picture><img src="https://img.shields.io/badge/JavaScript-111726?style=flat-square&logo=javascript&logoColor=9daaf8&labelColor=0a0d16" alt="JavaScript" /></picture><picture><img src="https://img.shields.io/badge/Python-111726?style=flat-square&logo=python&logoColor=9daaf8&labelColor=0a0d16" alt="Python" /></picture><picture><img src="https://img.shields.io/badge/HTML_%2F_CSS-111726?style=flat-square&logo=html5&logoColor=9daaf8&labelColor=0a0d16" alt="HTML / CSS" /></picture><picture><img src="https://img.shields.io/badge/Docker-111726?style=flat-square&logo=docker&logoColor=9daaf8&labelColor=0a0d16" alt="Docker" /></picture><picture><img src="https://img.shields.io/badge/Git-111726?style=flat-square&logo=git&logoColor=9daaf8&labelColor=0a0d16" alt="Git" /></picture>
   </p>
 
   <br />
@@ -56,19 +56,19 @@
 <br />
 
 <p align="center">
-  <img src="assets/banner/skills.svg" alt="SKILLS" />
+  <picture><img src="assets/banner/skills.svg" alt="SKILLS" /></picture>
   <br /><br />
   <!-- icons + group headings are one image, rendered by scripts/build.py -->
-  <img align="center" src="assets/skills.svg" width="820"
-    alt="Skills: languages, desktop and web frameworks, tools and platforms" />
+  <picture><img align="center" src="assets/skills.svg" width="820"
+    alt="Skills: languages, desktop and web frameworks, tools and platforms" /></picture>
   <br /><br />
-  <img align="center" src="assets/stats/top-langs.svg" width="420" alt="Top languages by bytes" />
+  <picture><img align="center" src="assets/stats/top-langs.svg" width="420" alt="Top languages by bytes" /></picture>
 </p>
 
 <br />
 
 <p align="center">
-  <img src="assets/banner/contact.svg" alt="CONTACT" />
+  <picture><img src="assets/banner/contact.svg" alt="CONTACT" /></picture>
   <br /><br />
   <a href="https://github.com/Xiaodu2638" title="GitHub"><img align="center" src="assets/icons/contact-github.svg" width="44" height="44" alt="GitHub" /></a>
   <a href="mailto:Du81470775@126.com" title="Email"><img align="center" src="assets/icons/contact-email.svg" width="44" height="44" alt="Email" /></a>
@@ -77,7 +77,7 @@
 <br />
 
 <p align="center">
-  <img src="assets/banner/footer.svg" alt="decoration | ..." />
+  <picture><img src="assets/banner/footer.svg" alt="decoration | ..." /></picture>
 </p>
 
 <br />

@@ -10,13 +10,13 @@
 </picture>
 
 <p align="center">
-  <img src="assets/typing/hello.svg" alt="{{TYPING0}}" />
+  <picture><img src="assets/typing/hello.svg" alt="{{TYPING0}}" /></picture>
 </p>
 
 <br />
 
 <p align="center">
-  <img src="assets/banner/status.svg" alt="STATUS" />
+  <picture><img src="assets/banner/status.svg" alt="STATUS" /></picture>
   <br /><br />
   <!-- one composed panel: heatmap + activity + streaks + languages -->
   <picture>
@@ -29,7 +29,7 @@
 <br />
 
 <p align="center">
-  <img src="assets/banner/intro.svg" alt="ABOUT" />
+  <picture><img src="assets/banner/intro.svg" alt="ABOUT" /></picture>
   <br /><br />
 
   <h2 align="center">{{HEADLINE}}</h2>
@@ -52,19 +52,19 @@
 <br />
 
 <p align="center">
-  <img src="assets/banner/skills.svg" alt="SKILLS" />
+  <picture><img src="assets/banner/skills.svg" alt="SKILLS" /></picture>
   <br /><br />
   <!-- icons + group headings are one image, rendered by scripts/build.py -->
-  <img align="center" src="assets/skills.svg" width="820"
-    alt="Skills: languages, desktop and web frameworks, tools and platforms" />
+  <picture><img align="center" src="assets/skills.svg" width="820"
+    alt="Skills: languages, desktop and web frameworks, tools and platforms" /></picture>
   <br /><br />
-  <img align="center" src="assets/stats/top-langs.svg" width="420" alt="Top languages by bytes" />
+  <picture><img align="center" src="assets/stats/top-langs.svg" width="420" alt="Top languages by bytes" /></picture>
 </p>
 
 <br />
 
 <p align="center">
-  <img src="assets/banner/contact.svg" alt="CONTACT" />
+  <picture><img src="assets/banner/contact.svg" alt="CONTACT" /></picture>
   <br /><br />
   {{CONTACT}}
 </p>
@@ -72,7 +72,7 @@
 <br />
 
 <p align="center">
-  <img src="assets/banner/footer.svg" alt="decoration | ..." />
+  <picture><img src="assets/banner/footer.svg" alt="decoration | ..." /></picture>
 </p>
 
 <br />
