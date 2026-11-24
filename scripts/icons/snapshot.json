@@ -4,8 +4,8 @@
  "bio": "",
  "followers": 0,
  "following": 1,
- "public_repos": 5,
- "total_contributions": 168,
+ "public_repos": 4,
+ "total_contributions": 157,
  "days": [
   [
    "2025-11-23",
@@ -1779,13 +1779,13 @@
   ],
   [
    "2026-11-12",
-   4,
-   8
+   0,
+   0
   ],
   [
    "2026-11-13",
-   2,
-   3
+   0,
+   0
   ],
   [
    "2026-11-14",
@@ -1836,6 +1836,11 @@
    "2026-11-23",
    3,
    7
+  ],
+  [
+   "2026-11-24",
+   0,
+   0
   ]
  ],
  "repos": [
@@ -1847,15 +1852,6 @@
    "forks": 0,
    "url": "https://github.com/Xiaodu2638/Xiaodu2638",
    "updated": "2026-11-23"
-  },
-  {
-   "name": "Access-Denied",
-   "description": "未授权访问 / ACCESS DENIED —— 基于 win11React 的互动叙事",
-   "language": "JavaScript",
-   "stars": 0,
-   "forks": 0,
-   "url": "https://github.com/Xiaodu2638/Access-Denied",
-   "updated": "2026-11-13"
   },
   {
    "name": "Tarkov-Atlas",
@@ -1878,28 +1874,20 @@
  ],
  "languages": [
   [
-   "JavaScript",
-   515167
-  ],
-  [
    "C#",
    397203
   ],
   [
    "Python",
-   251868
-  ],
-  [
-   "SCSS",
-   199310
+   252388
   ],
   [
    "HTML",
-   80662
+   76451
   ],
   [
-   "CSS",
-   13675
+   "JavaScript",
+   13896
   ],
   [
    "Shell",
@@ -1907,7 +1895,7 @@
   ],
   [
    "PowerShell",
-   6477
+   5637
   ],
   [
    "Edge",
@@ -1916,19 +1904,11 @@
   [
    "Dockerfile",
    620
-  ],
-  [
-   "Rust",
-   272
-  ],
-  [
-   "Procfile",
-   15
   ]
  ],
  "stars": 4,
  "forks": 0,
  "best_streak": 7,
  "current_streak": 1,
- "fetched_at": "2026-11-23T15:27:12+00:00"
+ "fetched_at": "2026-11-24T11:05:18+00:00"
 }
