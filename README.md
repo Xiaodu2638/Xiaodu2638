@@ -4,24 +4,24 @@
 <!-- the wordmark is an image, not a <pre>: a <pre> of box-drawing characters is
      ~556px wide and forces a horizontal scrollbar on phones -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
-  <img src="assets/hero.svg" width="880"
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg?v=09fba20d93">
+  <img src="assets/hero.svg?v=0f2a3219fa" width="880"
     alt="XIAODU" />
 </picture>
 
 <p align="center">
-  <picture><img src="assets/typing/hello.svg" alt="Hi, I'm Xiaodu." /></picture>
+  <picture><img src="assets/typing/hello.svg?v=3c6357578e" alt="Hi, I'm Xiaodu." /></picture>
 </p>
 
 <br />
 
 <p align="center">
-  <picture><img src="assets/banner/status.svg" alt="STATUS" /></picture>
+  <picture><img src="assets/banner/status.svg?v=d603dfdb93" alt="STATUS" /></picture>
   <br /><br />
   <!-- one composed panel: heatmap + activity + streaks + languages -->
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/status-dark.svg">
-    <img align="center" src="assets/status.svg" width="820"
+    <source media="(prefers-color-scheme: dark)" srcset="assets/status-dark.svg?v=5a901cd27a">
+    <img align="center" src="assets/status.svg?v=a8d9d03123" width="820"
       alt="Xiaodu status: contribution heatmap, 30-day activity, GitHub stats, streak and top languages">
   </picture>
 </p>
@@ -29,7 +29,7 @@
 <br />
 
 <p align="center">
-  <picture><img src="assets/banner/intro.svg" alt="ABOUT" /></picture>
+  <picture><img src="assets/banner/intro.svg?v=518f8f1894" alt="ABOUT" /></picture>
   <br /><br />
 
   <h2 align="center">Developer · C# & Web</h2>
@@ -47,37 +47,36 @@
   <br />
 
   <p align="center">
-    <a href="https://github.com/Xiaodu2638/Tarkov-Atlas"><img src="assets/cards/Tarkov-Atlas.svg" width="380" alt="Tarkov-Atlas" /></a>
-<a href="https://github.com/Xiaodu2638/Live-QRCode"><img src="assets/cards/Live-QRCode.svg" width="380" alt="Live-QRCode" /></a><br/>
-<a href="https://github.com/Xiaodu2638/Access-Denied"><img src="assets/cards/Access-Denied.svg" width="380" alt="Access-Denied" /></a>
+    <a href="https://github.com/Xiaodu2638/Live-QRCode"><img src="assets/cards/Live-QRCode.svg?v=4c043f4c15" width="380" alt="Live-QRCode" /></a>
+<a href="https://github.com/Xiaodu2638/Tarkov-Atlas"><img src="assets/cards/Tarkov-Atlas.svg?v=4605f1c378" width="380" alt="Tarkov-Atlas" /></a>
   </p>
 </p>
 
 <br />
 
 <p align="center">
-  <picture><img src="assets/banner/skills.svg" alt="SKILLS" /></picture>
+  <picture><img src="assets/banner/skills.svg?v=4595a73297" alt="SKILLS" /></picture>
   <br /><br />
   <!-- icons + group headings are one image, rendered by scripts/build.py -->
-  <picture><img align="center" src="assets/skills.svg" width="820"
+  <picture><img align="center" src="assets/skills.svg?v=b1195509d3" width="820"
     alt="Skills: languages, desktop and web frameworks, tools and platforms" /></picture>
   <br /><br />
-  <picture><img align="center" src="assets/stats/top-langs.svg" width="420" alt="Top languages by bytes" /></picture>
+  <picture><img align="center" src="assets/stats/top-langs.svg?v=f2a76f5c3c" width="420" alt="Top languages by bytes" /></picture>
 </p>
 
 <br />
 
 <p align="center">
-  <picture><img src="assets/banner/contact.svg" alt="CONTACT" /></picture>
+  <picture><img src="assets/banner/contact.svg?v=32974093cd" alt="CONTACT" /></picture>
   <br /><br />
-  <a href="https://github.com/Xiaodu2638" title="GitHub"><img align="center" src="assets/icons/contact-github.svg" width="44" height="44" alt="GitHub" /></a>
-  <a href="mailto:Du81470775@126.com" title="Email"><img align="center" src="assets/icons/contact-email.svg" width="44" height="44" alt="Email" /></a>
+  <a href="https://github.com/Xiaodu2638" title="GitHub"><img align="center" src="assets/icons/contact-github.svg?v=65a6b35bf6" width="44" height="44" alt="GitHub" /></a>
+  <a href="mailto:Du81470775@126.com" title="Email"><img align="center" src="assets/icons/contact-email.svg?v=20b796e675" width="44" height="44" alt="Email" /></a>
 </p>
 
 <br />
 
 <p align="center">
-  <picture><img src="assets/banner/footer.svg" alt="decoration | ..." /></picture>
+  <picture><img src="assets/banner/footer.svg?v=f41369a856" alt="decoration | ..." /></picture>
 </p>
 
 <br />

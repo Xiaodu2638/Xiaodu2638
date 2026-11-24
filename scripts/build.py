@@ -10,7 +10,9 @@ overlap. A failed audit aborts the build instead of shipping a broken image.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
+import re
 import sys
 from pathlib import Path
 from typing import Any
@@ -74,11 +76,44 @@ def contact_chips(cfg: dict[str, Any], icons: dict[str, dict], audit: Audit) -> 
     return "\n  ".join(chips)
 
 
+def cache_bust(readme: str) -> str:
+    """Append ?v=<content hash> to every local asset URL in the README."""
+    def repl(m: re.Match) -> str:
+        src = m.group(1)
+        f = ROOT / src
+        if "?" in src or not f.is_file():
+            return m.group(0)
+        digest = hashlib.sha1(f.read_bytes()).hexdigest()[:10]
+        return f'"{src}?v={digest}"'
+    return re.sub(r'"(assets/[^"?]+\.svg)"', repl, readme)
+
+
 def repo_meta(snap: Snapshot, name: str) -> dict:
     for r in snap.repos:
         if r.name == name:
-            return {"language": r.language, "stars": r.stars, "forks": r.forks}
+            return {"language": r.language, "stars": r.stars, "forks": r.forks,
+                    "description": r.description}
     return {}
+
+
+def resolve_pinned(cfg: dict[str, Any], snap: Snapshot) -> list[dict[str, str]]:
+    """Which repos get a card.
+
+    pinned_auto: pick the most notable repos straight from the live snapshot, so a
+    renamed, deleted or newly created repo is reflected on the next run instead of
+    being frozen in config.json. The explicit "pinned" list is only the fallback.
+    """
+    if not cfg.get("pinned_auto"):
+        return [{"repo": p["repo"], "desc": (p.get("desc") or "").strip()}
+                for p in cfg.get("pinned", [])]
+
+    limit = max(1, int(cfg.get("pinned_limit", 3)))
+    # the profile repo itself is not one of the "projects" worth a card
+    pool = [r for r in snap.repos if r.name != cfg["username"]]
+    # stable two-pass sort: newest first, then most starred first
+    pool.sort(key=lambda r: r.updated, reverse=True)
+    pool.sort(key=lambda r: r.stars, reverse=True)
+    return [{"repo": r.name, "desc": (r.description or "").strip()} for r in pool[:limit]]
 
 
 def main() -> int:
@@ -116,7 +151,8 @@ def main() -> int:
     }
     for i in range(len(cfg["typing_lines"])):
         docs[f"typing/hello-{i}.svg"] = panels.typing(cfg, i)
-    for p in cfg["pinned"]:
+    pinned_list = resolve_pinned(cfg, snap)
+    for p in pinned_list:
         docs[f"cards/{p['repo']}.svg"] = panels.repo_card(
             cfg, p["repo"], p["desc"], repo_meta(snap, p["repo"]))
 
@@ -130,7 +166,7 @@ def main() -> int:
     cards = [
         f'<a href="https://github.com/{cfg["username"]}/{p["repo"]}">'
         f'<img src="assets/cards/{p["repo"]}.svg" width="380" alt="{p["repo"]}" /></a>'
-        for p in cfg["pinned"]]
+        for p in pinned_list]
     # two cards per row; every row is closed so the layout never reflows
     rows = [cards[i:i + 2] for i in range(0, len(cards), 2)]
     pinned = "<br/>\n".join("\n".join(r) for r in rows)
@@ -157,6 +193,11 @@ def main() -> int:
               .replace("{{USERNAME}}", cfg["username"])
               .replace("{{TYPING0}}", cfg["typing_lines"][0])
               .replace("{{ASCII_NAME}}", cfg["ascii_name"]))
+    # GitHub proxies every README image through camo, keyed by the URL alone. A
+    # regenerated SVG with an unchanged URL therefore keeps showing the *old*
+    # picture for days - the workflow "runs" and commits, yet the page never
+    # moves. Stamp each URL with a content hash so camo sees a new key.
+    readme = cache_bust(readme)
     write(ROOT / "README.md", readme)
 
     write(ROOT / "demos" / "status-panel.md",

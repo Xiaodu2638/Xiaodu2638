@@ -31,10 +31,11 @@
     "x": "",
     "blog": ""
   },
+  "pinned_auto": true,
+  "pinned_limit": 3,
   "pinned": [
     {"repo": "Tarkov-Atlas", "desc": "Offline tactical map & quest helper for Escape from Tarkov"},
-    {"repo": "Live-QRCode", "desc": "Scan on phone, render on screen \u2014 self-hosted QR relay"},
-    {"repo": "Access-Denied", "desc": "Interactive narrative built on win11React"}
+    {"repo": "Live-QRCode", "desc": "Scan on phone, render on screen \u2014 self-hosted QR relay"}
   ],
   "skills": {
     "Languages": ["csharp", "cplusplus", "c", "python", "javascript", "typescript", "html5", "css3", "lua", "markdown"],

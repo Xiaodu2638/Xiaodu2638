@@ -16,9 +16,17 @@ on:
 permissions:
   contents: write
 
+# A manual dispatch racing the schedule would make the second run push onto a
+# stale base and fail the fast-forward. Serialise instead of cancelling: the
+# queued run then builds on the first one's commit.
+concurrency:
+  group: refresh-profile-assets
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
 
@@ -47,4 +55,12 @@ jobs:
             exit 0
           fi
           git commit -m "chore: refresh profile assets"
-          git push
+          # the schedule can fire while a human push lands; rebase once and retry
+          # rather than failing the whole refresh
+          for i in 1 2 3; do
+            git push && exit 0
+            echo "push rejected (attempt $i), rebasing onto origin/main"
+            git pull --rebase --autostash origin main
+          done
+          echo "push failed after retries" >&2
+          exit 1
